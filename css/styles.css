@@ -1,12 +1,24 @@
+body {
+	  background-image: url("../images/bkground.jpg");
+    background-color: #cccccc;
+}
+	
 #planetTable {
-	width: 90%;
+	width: 100%;
 	border-collapse: collapse;
 }
 
+.container {
+	width: 1080px;
+	margin: 0 auto;
+	overflow: hidden
+}
+
 th {
-	background: #a50707;
+	background: #659ed8;
 	color: white;
 	font-weight: bold;
+	border-radius: 10px;
 	padding: 15px;
 	text-align: center;
 	vertical-align: middle;
@@ -16,7 +28,7 @@ th {
 
 td {
 	padding: 0px;
-	border: 1px solid #ccc;
+	border: 1px solid #818080;
 	text-align: middle;
 	/*overflow-wrap: break-word; */
 	font-family: 'Space Mono', monospace;
@@ -41,8 +53,9 @@ tr:nth-of-type(even) {
 .planetTable tbody tr:nth-child(10) td:nth-child(1n+1),
 .planetTable tbody tr:nth-child(20) td:nth-child(1n+1),
 .planetTable tbody tr:nth-child(30) td:nth-child(1n+1){
-	background: cadetblue;
-	padding: .3em;
+	background-image: url("../images/bkground.jpg");
+	border-color: black;
+	padding: .7em;
 }
 
 /* Simulated sub header children*/
@@ -50,7 +63,8 @@ tr:nth-of-type(even) {
 .planetTable tbody tr:nth-child(11) td:nth-child(1n+1),
 .planetTable tbody tr:nth-child(21) td:nth-child(1n+1),
 .planetTable tbody tr:nth-child(31) td:nth-child(1n+1){
-	background: #060676;
+	background: #356aa0;
+	border-radius: 15px;
 	color: white;
 	font-weight: bold;
 	padding: 6px;
@@ -68,6 +82,7 @@ tr:nth-of-type(even) {
 {
    background-color: #a27701;
 	text-align: center;
+	border-radius: 15px;
 	 padding: 5px;
 }
 
@@ -128,12 +143,17 @@ a:hover {
 .venusImgBox { 
 	width: 200px; 
 	height: 196px; 
-	background: url("../images/venus1.jpg") no-repeat; } 
+	background: url("../images/venus1.jpg");
+} 
 
 .venusImgBox:hover { 
 	width: 200px;  
-height:  196px;
-	background: url("../images/venus2.jpg") no-repeat;
+	height:  196px;
+	background: url("../images/venus2.jpg");
+	/* onlyh fix I could find for mozilla and it does 
+	/* not work */
+	/*	-webkit-transform: scale(1.0); */
+  /*  -moz-transform: scale(1.0) rotate(0.02deg);*/
 	z-index: -1;
 }
 
@@ -141,12 +161,13 @@ height:  196px;
 .jupiterImgBox { 
 	width: 200px; 
 	height: 196px; 
-	background: url("../images/jupiter1.jpg") no-repeat; } 
+	background: url("../images/jupiter1.jpg");
+} 
 
 .jupiterImgBox:hover { 
 	width: 200px;  
 	height:  196px;
-	background: url("../images/jupiter2.jpg") no-repeat;
+	background: url("../images/jupiter2.jpg");
 	z-index: -1;
 }
 
@@ -154,24 +175,26 @@ height:  196px;
 .saturnImgBox { 
 	width: 200px; 
 	height: 196px; 
-	background: url("../images/saturn1.jpg") no-repeat; } 
+	background: url("../images/saturn1.jpg"); 
+} 
 
 .saturnImgBox:hover { 
 	width: 200px;  
 	height:  196px;
-	background: url("../images/saturn2.jpg") no-repeat;
+	background: url("../images/saturn2.jpg") ;
 	z-index: -1;
 }
 /* CSS backround in first column for saturn pics */
 .uranusImgBox { 
 	width: 200px; 
 	height: 196px; 
-	background: url("../images/uranus1.jpg") no-repeat; } 
+	background: url("../images/uranus1.jpg") 
+} 
 
 .uranusImgBox:hover { 
 	width: 200px;  
 	height:  196px;
-	background: url("../images/uranus2.jpg") no-repeat;
+	background: url("../images/uranus2.jpg");
 	z-index: -1;
 }
 
