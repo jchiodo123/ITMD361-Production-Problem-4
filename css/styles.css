@@ -1,17 +1,17 @@
 #planetTable {
-	width: 100%;
+	width: 90%;
 	border-collapse: collapse;
 }
 
 th {
-	background: #333;
+	background: #a50707;
 	color: white;
 	font-weight: bold;
-	padding: 6px;
+	padding: 15px;
 	text-align: center;
-	vertical-align: baseline;
+	vertical-align: middle;
 	font-family: 'Fredericka the Great', cursive;
-	font-size: 1.1em;
+	font-size: 1.6em;
 }
 
 td {
@@ -34,37 +34,44 @@ tr:nth-of-type(odd) {
 }
 
 tr:nth-of-type(even) {
-	background: #e5dddb;
+	background: #fcf0d0;
 }
 
-tr.tableSpacer > td
-{
-  padding-bottom: 1em;
+/* Spacer children */
+.planetTable tbody tr:nth-child(10) td:nth-child(1n+1),
+.planetTable tbody tr:nth-child(20) td:nth-child(1n+1),
+.planetTable tbody tr:nth-child(30) td:nth-child(1n+1){
+	background: cadetblue;
+	padding: .3em;
 }
 
-.planetTable tbody tr:nth-child(1) td:nth-child(1) {
-   background-color: black;
-	 padding: 0px;
-}
-
-.planetTable tbody tr:nth-child(8) td:nth-child(1),
-.planetTable tbody tr:nth-child(18) td:nth-child(1)
-{
-   background-color: #dbb864;
-	text-align: center;
-	 padding: 5px;
-}
-
-.planetTable tbody tr:nth-child(10) td:nth-child(1n+1) {
-	background: #333;
+/* Simulated sub header children*/
+.planetTable tbody tr:nth-child(1) td:nth-child(1n+1),
+.planetTable tbody tr:nth-child(11) td:nth-child(1n+1),
+.planetTable tbody tr:nth-child(21) td:nth-child(1n+1),
+.planetTable tbody tr:nth-child(31) td:nth-child(1n+1){
+	background: #060676;
 	color: white;
 	font-weight: bold;
 	padding: 6px;
 	text-align: center;
 	vertical-align: baseline;
 	font-family: 'Fredericka the Great', cursive;
-	font-size: 1.1em;
+	font-size: 1.2em;
 }
+
+/* NASA Science Solar System Exploration children link */
+.planetTable tbody tr:nth-child(9) td:nth-child(1),
+.planetTable tbody tr:nth-child(19) td:nth-child(1),
+.planetTable tbody tr:nth-child(29) td:nth-child(1),
+.planetTable tbody tr:nth-child(39) td:nth-child(1)
+{
+   background-color: #a27701;
+	text-align: center;
+	 padding: 5px;
+}
+
+
 a {
 	text-decoration: none;
 	color: black;
@@ -117,10 +124,6 @@ a:hover {
     visibility: visible;
 }
 
-#planetLink {
-	background-color: #c99a28;
-}
-
 /* CSS backround in first column for venus pics */
 .venusImgBox { 
 	width: 200px; 
@@ -144,6 +147,31 @@ height:  196px;
 	width: 200px;  
 	height:  196px;
 	background: url("../images/jupiter2.jpg") no-repeat;
+	z-index: -1;
+}
+
+/* CSS backround in first column for saturn pics */
+.saturnImgBox { 
+	width: 200px; 
+	height: 196px; 
+	background: url("../images/saturn1.jpg") no-repeat; } 
+
+.saturnImgBox:hover { 
+	width: 200px;  
+	height:  196px;
+	background: url("../images/saturn2.jpg") no-repeat;
+	z-index: -1;
+}
+/* CSS backround in first column for saturn pics */
+.uranusImgBox { 
+	width: 200px; 
+	height: 196px; 
+	background: url("../images/uranus1.jpg") no-repeat; } 
+
+.uranusImgBox:hover { 
+	width: 200px;  
+	height:  196px;
+	background: url("../images/uranus2.jpg") no-repeat;
 	z-index: -1;
 }
 
