@@ -10,6 +10,8 @@ th {
 	padding: 6px;
 	text-align: center;
 	vertical-align: baseline;
+	font-family: 'Fredericka the Great', cursive;
+	font-size: 1.1em;
 }
 
 td {
@@ -20,17 +22,12 @@ td {
 	font-family: 'Space Mono', monospace;
 }
 
-th {
- 	font-family: 'Fredericka the Great', cursive;
-	font-size: 1.1em;
-}
-
 .value {
 	padding-left: 5px;
 	padding-right: 2px;
 }
 
-/* Zebra striping */
+/* Row striping */
 
 tr:nth-of-type(odd) {
 	background: #f5f5f2;
@@ -40,17 +37,34 @@ tr:nth-of-type(even) {
 	background: #e5dddb;
 }
 
+tr.tableSpacer > td
+{
+  padding-bottom: 1em;
+}
+
 .planetTable tbody tr:nth-child(1) td:nth-child(1) {
    background-color: black;
 	 padding: 0px;
 }
 
-.planetTable tbody tr:nth-child(8) td:nth-child(1) {
+.planetTable tbody tr:nth-child(8) td:nth-child(1),
+.planetTable tbody tr:nth-child(18) td:nth-child(1)
+{
    background-color: #dbb864;
 	text-align: center;
 	 padding: 5px;
 }
 
+.planetTable tbody tr:nth-child(10) td:nth-child(1n+1) {
+	background: #333;
+	color: white;
+	font-weight: bold;
+	padding: 6px;
+	text-align: center;
+	vertical-align: baseline;
+	font-family: 'Fredericka the Great', cursive;
+	font-size: 1.1em;
+}
 a {
 	text-decoration: none;
 	color: black;
@@ -107,15 +121,29 @@ a:hover {
 	background-color: #c99a28;
 }
 
-.imgBox { 
+/* CSS backround in first column for venus pics */
+.venusImgBox { 
 	width: 200px; 
 	height: 196px; 
 	background: url("../images/venus1.jpg") no-repeat; } 
 
-.imgBox:hover { 
+.venusImgBox:hover { 
 	width: 200px;  
 height:  196px;
 	background: url("../images/venus2.jpg") no-repeat;
+	z-index: -1;
+}
+
+/* CSS backround in first column for jupiter pics */
+.jupiterImgBox { 
+	width: 200px; 
+	height: 196px; 
+	background: url("../images/jupiter1.jpg") no-repeat; } 
+
+.jupiterImgBox:hover { 
+	width: 200px;  
+	height:  196px;
+	background: url("../images/jupiter2.jpg") no-repeat;
 	z-index: -1;
 }
 
