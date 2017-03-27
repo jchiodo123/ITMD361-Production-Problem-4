@@ -1,0 +1,121 @@
+#planetTable {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th {
+	background: #333;
+	color: white;
+	font-weight: bold;
+	padding: 6px;
+	text-align: center;
+	vertical-align: baseline;
+}
+
+td {
+	padding: 0px;
+	border: 1px solid #ccc;
+	text-align: middle;
+	/*overflow-wrap: break-word; */
+	font-family: 'Space Mono', monospace;
+}
+
+th {
+ 	font-family: 'Fredericka the Great', cursive;
+	font-size: 1.1em;
+}
+
+.value {
+	padding-left: 5px;
+	padding-right: 2px;
+}
+
+/* Zebra striping */
+
+tr:nth-of-type(odd) {
+	background: #f5f5f2;
+}
+
+tr:nth-of-type(even) {
+	background: #e5dddb;
+}
+
+.planetTable tbody tr:nth-child(1) td:nth-child(1) {
+   background-color: black;
+	 padding: 0px;
+}
+
+.planetTable tbody tr:nth-child(8) td:nth-child(1) {
+   background-color: #dbb864;
+	text-align: center;
+	 padding: 5px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	color: #e2ea15;
+	background-color: black;
+}
+
+/*a.active {
+	background: #136caa;
+	color: #ddeaf4;
+	border: 3px solid #e8dfd4;
+	cursor: default;
+	box-shadow: #5d646a 0 0 2px;
+}
+*/
+.tooltip {
+    position: relative;
+    display: inline;
+    border-bottom: 1px dashed black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 220px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 5px;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 105%;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+#planetLink {
+	background-color: #c99a28;
+}
+
+.imgBox { 
+	width: 200px; 
+	height: 196px; 
+	background: url("../images/venus1.jpg") no-repeat; } 
+
+.imgBox:hover { 
+	width: 200px;  
+height:  196px;
+	background: url("../images/venus2.jpg") no-repeat;
+	z-index: -1;
+}
+
