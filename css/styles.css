@@ -102,7 +102,7 @@ tr:nth-of-type(even) {
 .planetTable tbody tr:nth-child(30) td:nth-child(1n+1) {
 	background-image: url("../images/bkground.jpg");
 	border-color: black;
-	padding: .7em;
+	padding: .3em;
 }
 
 /* anchor styles */
