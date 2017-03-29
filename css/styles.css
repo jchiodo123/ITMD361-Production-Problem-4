@@ -5,31 +5,43 @@
 /* display starfield background */
 body {
 	background-image: url("../images/bkground.jpg");
-}
+
+	}
 
 /* table of width 96% */
 table {
-	width: 96%;
+	border-collapse: collapse;
+	width: 98%;
 	margin: 0 auto;
 }
+
+/* column width adjusters, using 96% */
+.col1Width { width: 28%; }
+.col2Width { width: 17%; }
+.col3Width { width: 17%; }
+.col2Width { width: 17%; }
+.col3Width { width: 17%; }
+
 
 /* Center the table of width 96%, using the position */
 /* left 50%, left margin negative half the container width */
 /* method.  */
 .container {
-	width: 1080px;
+	width: 960px;
 	position: relative;
 	left: 50%;
-	margin-left: -540px;
+	margin-left: -480px;
 }
 
+.smaller{
+	font-size: .8em;
+}
 /* Table header styles */
 th {
 	background: #659ed8;
-	color: white;
+	color: azure;
+	border: 1px solid #a27701;
 	font-weight: bold;
-	border-radius: 10px;
-	-moz-border-radius: 10px;
 	padding: 15px;
 	text-align: center;
 	vertical-align: middle;
@@ -39,19 +51,40 @@ th {
 
 /* Table data cells styles */
 td {
-	padding: 0px;
-	border: 1px solid #d8cbcb;
-	border-radius: 5px;
-	text-align: left;
+	font-size: 1em;
+	border: 1px solid #a27701;
+	text-align: center;
 	font-family: 'Space Mono', monospace;
+	
+}
+
+.planetTable tbody tr:nth-child(9) td:nth-child(1) {
+	background-color: #a27701;
+	text-align: center;
+/*	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;*/
+	padding: 5px;
+}
+
+.planetTable tbody tr:nth-child(1) td:nth-child(1) {
+	background-image: url("../images/bkground.jpg");
+	border-color: black;
+	padding: .3em;
+}	
+	
+.planetTable tbody tr:nth-child(1n+2) td:nth-child(1) {
+	font-weight: 600;
 }
 
 /* used to fine tune the text in the data cells */
 .value {
-	padding-left: 7px;
-	padding-right: 0px;
+	padding: 7px;
 }
 
+.attribute {
+	padding: 5px;
+	text-align: left
+}
 
 /* Alternate color row striping */
 tr:nth-of-type(odd) {
@@ -61,54 +94,10 @@ tr:nth-of-type(even) {
 	background: #fcf0d0;
 }
 
-
-/* One single table, the appearence is 4 tables */
-
-/* using nth child selector, target only the rows */
-/* that are are simulated sub table headers */
-.planetTable tbody tr:nth-child(1) td:nth-child(1n+1),
-.planetTable tbody tr:nth-child(11) td:nth-child(1n+1),
-.planetTable tbody tr:nth-child(21) td:nth-child(1n+1),
-.planetTable tbody tr:nth-child(31) td:nth-child(1n+1) {
-	background: #356aa0;
-	border-radius: 15px;
-	color: white;
-	font-weight: bold;
-	padding: 6px;
-	text-align: center;
-	vertical-align: baseline;
-	font-family: 'Macondo', cursive;
-	font-size: 1.2em;
-}
-
-/* using nth child selector, target only the rows */
-/* that are are simulated sub table footers with  */
-/* the NASA Science Solar System Exploration link */
-.planetTable tbody tr:nth-child(9) td:nth-child(1),
-.planetTable tbody tr:nth-child(19) td:nth-child(1),
-.planetTable tbody tr:nth-child(29) td:nth-child(1),
-.planetTable tbody tr:nth-child(39) td:nth-child(1) {
-	background-color: #a27701;
-	text-align: center;
-	border-radius: 15px;
-	padding: 5px;
-}
-
-/* using nth child selector, target only the rows   */
-/* that are transparent looking spacers bewteen the */
-/* simulated tables. */
-.planetTable tbody tr:nth-child(10) td:nth-child(1n+1),
-.planetTable tbody tr:nth-child(20) td:nth-child(1n+1),
-.planetTable tbody tr:nth-child(30) td:nth-child(1n+1) {
-	background-image: url("../images/bkground.jpg");
-	border-color: black;
-	padding: .3em;
-}
-
 /* anchor styles */
 a {
 	text-decoration: none;
-	color: black;
+	color: azure;
 }
 
 a:hover {
@@ -116,123 +105,49 @@ a:hover {
 	background-color: #356aa0;
 }
 
-/* Tooltip feature copied from:                  */
-/* https://www.w3schools.com/css/css_tooltip.asp */
-/*                                               */
-/* Used on the planet speicifactions to provide  */
-/* visual aid that they are links and add some   */
-/* extra bling to page.                          */
-
-/* minor customization for fit this application  */
-
-.tooltip.value {
-	position: relative;
-	display: inline-block;
-	border-bottom: 1px dashed #356aa0;
-}
-/* styling for tooltip bubble */
-.tooltip.value .tooltiptext {
-	visibility: hidden;
-	width: 220px;
-	background-color: #356aa0;
-	color: #e2ea15;
+#planetheading {
+	font-size: 2.5em;
+	color: #5aa0e6;
+	font-family: 'Macondo', cursive;
 	text-align: center;
-	border-radius: 5px; /* round out the tooltip some */
-	padding: 5px 5px;
-	position: absolute;
-	z-index: 1;
-	top: -5px;
-	left: 105%;
-}
- /* creates an arrow tip using borders */
-.tooltip.value .tooltiptext::after {
-	content: "";
-	position: absolute;
-	top: 50%;
-	right: 100%;
-	margin-top: -5px;
-	border-width: 5px;
-	border-style: solid;
-	border-color: transparent #356aa0 transparent transparent;
 }
 
-.tooltip.value:hover .tooltiptext {
-	visibility: visible;
+/*******************************************/
+/* footer style, some fun with transitions */
+/*******************************************/
+
+footer {
+	font-size: 1em;
+	background-color: #4f98cb;
+	color: azure;
+	border: .25em solid #a27701;
+	border-radius: 10px;
+	padding: .25% .5%;
+	margin: 2% 3%;
+	float: right;
+transition: background-color 0.3s ease;
 }
 
-/* column width adjusters, using 96% */
-.col1Width { width: 18%; }
-.col2Width { width: 50%; }
-.col3Width { width: 28%; }
-
-
-/* Loading images with CSS and the hover pseudo */
-/* selector, allows the user to mouse over and  */
-/* a 2nd image */
-/* All images sized to 200x196 pxs              */
-
-/* seems simple enough, but does not work properly */
-/* on mozilla, works fine on chrome, IE and edge.  */
-
-/* only fix I could find for mozilla, in the hover */
-/* selector but does not work properly for me */
-
-
-/* CSS backround images in first column for venus pics */
-.venusImgBox {
-	width: 200px;
-	height: 196px;
-	background: url("../images/venus1.jpg");
+footer:hover {
+	background-color: #e8dfd4;
+			box-shadow:none;
 }
 
-.venusImgBox:hover {
-	width: 200px;
-	height: 196px;
-	/*	-webkit-transform: scale(1.0); */
-  /*  -moz-transform: scale(1.0) rotate(0.02deg);*/
-	background: url("../images/venus2.jpg");
-	z-index: -1;
+/* footer->address styles */
+
+address a[href^="mailto:"]:hover {
+	background-color: #e8dfd4;
 }
 
-
-/* CSS backround images in first column for jupiter pics */
-.jupiterImgBox {
-	width: 200px;
-	height: 196px;
-	background: url("../images/jupiter1.jpg");
+address {
+	color: black;
+	font-style: normal;
 }
+ 
+address a[href^="mailto:"] {
+	display: block;
+	color: black;
+	font-style: italic;
+	text-align: center;
 
-.jupiterImgBox:hover {
-	width: 200px;
-	height: 196px;
-	background: url("../images/jupiter2.jpg");
-	z-index: -1;
-}
-
-/* CSS backround images in first column for saturn pics */
-.saturnImgBox {
-	width: 200px;
-	height: 196px;
-	background: url("../images/saturn1.jpg");
-}
-
-.saturnImgBox:hover {
-	width: 200px;
-	height: 196px;
-	background: url("../images/saturn2.jpg");
-	z-index: -1;
-}
-
-/* CSS backround images in first column for saturn pics */
-.uranusImgBox {
-	width: 200px;
-	height: 196px;
-	background: url("../images/uranus1.jpg")
-}
-
-.uranusImgBox:hover {
-	width: 200px;
-	height: 196px;
-	background: url("../images/uranus2.jpg");
-	z-index: -1;
 }
