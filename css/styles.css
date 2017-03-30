@@ -2,13 +2,15 @@
 /* https://github.com/jchiodo123/ITMD361-Production-Problem-4 */
 /* 03/29/2017 */
 
-/* display starfield background */
 
+/* display starfield background */
 body {
   background-image: url("../images/bkground.jpg");
 }
 
+
 /* table of width 98% */
+
 table {
   overflow: hidden;
   width: 98%;
@@ -19,15 +21,31 @@ table {
 
 /* column width adjusters, using 96% */
 
-.col1Width { width: 28%; }
-.col2Width { width: 17%; }
-.col3Width { width: 17%; }
-.col2Width { width: 17%; }
-.col3Width { width: 17%; }
+.col1Width {
+  width: 28%;
+}
+
+.col2Width {
+  width: 17%;
+}
+
+.col3Width {
+  width: 17%;
+}
+
+.col2Width {
+  width: 17%;
+}
+
+.col3Width {
+  width: 17%;
+}
 
 
 /* Center the table of width 98%, using the position */
 /* left 50%, left margin negative half the container width */
+
+
 /* method.  */
 
 .container {
@@ -37,10 +55,13 @@ table {
   margin-left: -480px;
 }
 
+
 /* define size of smaller text */
+
 .smaller {
   font-size: .8em;
 }
+
 
 /* Table header styles */
 
@@ -56,13 +77,14 @@ th {
   font-size: 1.6em;
 }
 
+
 /* Table data cells styles */
+
 td {
   font-size: 1em;
   border: 1px solid #a27701;
   text-align: center;
   font-family: 'Space Mono', monospace;
-  
 }
 
 .planetTable tbody tr:nth-child(9) td:nth-child(1) {
@@ -95,7 +117,9 @@ td {
   font-weight: 600;
 }
 
+
 /* used to fine tune the text in the data cells */
+
 .value {
   padding: 7px;
 }
@@ -118,6 +142,7 @@ tr:nth-of-type(even) {
 
 
 /* anchor styles */
+
 a {
   text-decoration: none;
   color: azure;
@@ -129,7 +154,7 @@ a:hover {
 }
 
 #planetheading {
-  font-size: 2.5em;
+  font-size: 3.5em;
   color: #5aa0e6;
   font-family: 'Macondo', cursive;
   text-align: center;
@@ -146,8 +171,8 @@ footer {
   color: azure;
   border: .25em solid #a27701;
   border-radius: 10px;
-  padding: .25% .5%;
-  margin: 2% 3%;
+  padding: 0%;
+  margin: 1% 2%;
   float: right;
   transition: background-color 0.3s ease;
 }
@@ -157,21 +182,63 @@ footer:hover {
   box-shadow: none;
 }
 
+address p {
+  margin: 2px;
+}
+
 
 /* footer->address styles */
 
 address a[href^="mailto:"]:hover {
   background-color: #e8dfd4;
+  padding: 0;
 }
 
 address {
   color: black;
   font-style: normal;
+  padding: 0px;
 }
 
 address a[href^="mailto:"] {
   display: block;
   color: black;
   font-style: italic;
+  text-align: center;
+}
+
+
+/* center gallery                            */
+/* 4 pics at width 200px + 2px border = 808  */
+/* each pic 10px margin left and right,      */
+/* 20+20+20+20= 80, total 888px              */
+/*                                           */
+/*  960-880 =  = 72, divide by 2 = 36px      */
+
+#gallerycont {
+  margin-left: 36px;
+}
+
+.planetgallery {
+  margin: 25px 10px 20px 10px;
+  ;
+  border: 1px solid #356aa0;
+  background-color: #a27701;
+  float: left;
+}
+
+.planetgallery:hover {
+  border: 2px solid #e8dfd4;
+  /* border-bottom: 1px solid #a27701;*/
+}
+
+.planetgallery img {
+  height: auto;
+}
+
+.planetdesc {
+  font-family: 'Space Mono', monospace;
+  color: azure;
+  padding: 15px;
   text-align: center;
 }
